@@ -219,9 +219,12 @@ a.link_button_green_large {
 #banner_inner {
   background-color: $banner-bg;
   background-image: url('/assets/header-bg.png');
-  background-position: top right;
+  background-position: top left;
   background-repeat: no-repeat;
   background-size: 100%;
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+      background-size: 50%;
+  }
 }
 
 #topnav {

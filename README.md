@@ -1,12 +1,12 @@
-Alavetelitheme
-==============
+MAVC theme
+==========
 
-This is a "hello world" type theme package for Alaveteli.
+This is the custom Alavetelitheme for an 
+[Alaveteli](http://alaveteli.org) installation for Liberia
+(a Make All Voices Count project, with 
+[iLab Liberia](http://http://ilabliberia.org/)).
 
-The intention is to support simple overlaying of templates and
-resources without the need to touch the core Alaveteli software.
-
-Typical usage should be limited to that described in the [documentation](http://alaveteli.org/docs/customising/themes/):
+See [documentation](http://alaveteli.org/docs/customising/themes/).
 
 
 ## To install:

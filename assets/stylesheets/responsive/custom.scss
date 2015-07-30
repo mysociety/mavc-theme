@@ -218,6 +218,10 @@ a.link_button_green_large {
 
 #banner_inner {
   background-color: $banner-bg;
+  background-image: url('/assets/header-bg.png');
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 #topnav {

@@ -395,7 +395,8 @@ a.link_button_green_large {
 
   /* Pad evenly top and bottom on smaller devices */
   #logo_wrapper{
-
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
     @include respond-min( $main_menu-mobile_menu_cutoff ){
       @include lte-ie7 {
         padding-bottom: 2em;

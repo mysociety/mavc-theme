@@ -219,7 +219,7 @@ a.link_button_green_large {
 #banner_inner {
   background-color: $banner-bg;
   background-image: url('/assets/header-bg.png');
-  background-position: top left;
+  background-position: top right;
   background-repeat: no-repeat;
   background-size: 100%;
   @include respond-min($main_menu-mobile_menu_cutoff) {
@@ -323,6 +323,8 @@ a.link_button_green_large {
     @extend %menu-item;
     @extend %sub-menu-item;
     font-weight: normal;
+    color: #fff;
+    background-color: transparent;
   }
   #logged_in_links {
     top: 4em;

@@ -1,8 +1,8 @@
 <div class="footer" id="footer">
   <div class="footer-container">
+    <div class="liberian-seal"><%= image_tag('roi-logo.png', :alt => 'Liberian Seal') %></div>
     <div id="footer-nav">
       <ul>
-        <li><%= link_to image_tag('logo.png'), frontpage_path, :id => 'logo' %></li>
         <li><%= link_to _("Contact {{site_name}}", :site_name => site_name), help_contact_path %></li>
         <% unless AlaveteliConfiguration::twitter_username.blank? %>
           <li><a href="https://twitter.com/<%= AlaveteliConfiguration::twitter_username %>"><%= _("Follow us on twitter") %></a></li>
@@ -13,8 +13,7 @@
     </div>
     <div class="footer__credits">
       <ul>
-        <li><%= image_tag('roi-logo.png', :alt => 'Liberian Seal') %></li><!--
-        --><li><a href="http://www.iic.gov.lr/">
+        <li class="credits__iic-logo"><a href="http://www.iic.gov.lr/">
           <%= image_tag('IIC-logo.png', :alt => 'Independent Information Commission') %></a></li>
       </ul>
     </div>

@@ -436,9 +436,20 @@ a.link_button_green_large {
   }
 }
 
+.liberian-seal {
+  @include respond-min( 35em ){
+    width: 20%;
+    float: left;
+    text-align: left;
+  }
+  img {
+    max-height: 80px;
+  }
+}
+
 #footer-nav {
   @include respond-min( 35em ){
-    width: 50%;
+    width: 30%;
     float: left;
   }
   li {
@@ -450,6 +461,7 @@ a.link_button_green_large {
   }
 
 }
+
 .footer__credits {
   @include respond-min( 35em ){
     width: 50%;
@@ -459,6 +471,7 @@ a.link_button_green_large {
   ul {
     list-style: none outside none;
     padding-left: 0;
+    margin: 0;
   }
   li {
     display: inline-block;

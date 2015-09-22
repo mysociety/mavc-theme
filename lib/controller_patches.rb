@@ -13,7 +13,15 @@ Rails.configuration.to_prepare do
         end
     end
     HelpController.class_eval do
-        def help_out
+
+        def foi_awareness
         end
+
+        def partners
+        end
+
+        def the_iic
+        end
+
     end
 end

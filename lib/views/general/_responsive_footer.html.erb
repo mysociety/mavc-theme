@@ -4,9 +4,11 @@
     <div id="footer-nav">
       <ul>
         <li><%= link_to _("Contact {{site_name}}", :site_name => site_name), help_contact_path %></li>
+        <li><a href="https://facebook.com/foiliberia"><%= _("Follow us on Facebook") %></a></li>
         <% unless AlaveteliConfiguration::twitter_username.blank? %>
-          <li><a href="https://twitter.com/<%= AlaveteliConfiguration::twitter_username %>"><%= _("Follow us on twitter") %></a></li>
+          <li><a href="https://twitter.com/<%= AlaveteliConfiguration::twitter_username %>"><%= _("Follow us on Twitter") %></a></li>
         <% end %>
+        <li><a href="https://linkedin.com/in/foiliberia"><%= _("Follow us on LinkedIn") %></a></li>
 
         <%= render :partial => 'general/responsive_credits' %>
       </ul>

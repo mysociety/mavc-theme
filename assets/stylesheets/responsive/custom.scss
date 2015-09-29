@@ -216,6 +216,10 @@ a.link_button_green_large {
 
 /* Header */
 
+#banner {
+  border-top: 0 !important;
+}
+
 #banner_inner {
   background-color: $banner-bg;
   background-image: url('/assets/header-bg.png');

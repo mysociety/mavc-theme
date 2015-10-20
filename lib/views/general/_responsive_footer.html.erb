@@ -1,23 +1,34 @@
 <div class="footer" id="footer">
   <div class="footer-container">
-    <div class="liberian-seal"><%= image_tag('roi-logo.png', :alt => 'Liberian Seal') %></div>
-    <div id="footer-nav">
-      <ul>
-        <li><%= link_to _("Contact {{site_name}}", :site_name => site_name), help_contact_path %></li>
-        <li><a href="https://facebook.com/foiliberia"><%= _("Follow us on Facebook") %></a></li>
-        <% unless AlaveteliConfiguration::twitter_username.blank? %>
-          <li><a href="https://twitter.com/<%= AlaveteliConfiguration::twitter_username %>"><%= _("Follow us on Twitter") %></a></li>
-        <% end %>
-        <li><a href="https://linkedin.com/in/foiliberia"><%= _("Follow us on LinkedIn") %></a></li>
+    <div class="footer__content">
+      <div class="footer__about">
+        <h2>About InfoLib</h2>
+        <p>Freedom of Information (FOI) is a fundamental human right for all persons irrespective of gender, religion or race that is protected by national.</p>
+      </div>
 
-        <%= render :partial => 'general/responsive_credits' %>
-      </ul>
+      <div class="footer__more-links">
+        <h2>Find out more</h2>
+        <ul>
+          <li><%= link_to 'FOI Awareness', help_general_path(:action => 'foi_awareness') %></li>
+          <li><%= link_to 'File a Complaint', help_general_path(:action => 'the_iic') %></li>
+          <li><%= link_to 'Partners', help_general_path(:action => 'partners') %></li>
+        </ul>
+      </div>
+
+      <div class="footer__logos">
+        <div class="liberian-seal"><%= image_tag('roi-logo.png', :alt => 'Liberian Seal') %></div>
+        <div class="iic-logo"><a href="http://www.iic.gov.lr/">
+              <%= image_tag('IIC-logo.png', :alt => 'Independent Information Commission') %></a>
+        </div>
+      </div>
     </div>
-    <div class="footer__credits">
-      <ul>
-        <li class="credits__iic-logo"><a href="http://www.iic.gov.lr/">
-          <%= image_tag('IIC-logo.png', :alt => 'Independent Information Commission') %></a></li>
-      </ul>
+    <div class="footer__content">
+      <div class="footer__credits">
+        <p>
+          An <a href="http://ilabliberia.org/">iLab Liberia</a> project, in
+          conjunction with <a href="https://mysociety.org">mySociety</a>,
+          powered by <a href="http://www.alaveteli.org">Alaveteli</a></p>
+      </div>
     </div>
   </div>
 </div>

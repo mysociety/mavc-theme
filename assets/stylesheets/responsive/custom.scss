@@ -27,7 +27,7 @@ $main_menu-active_link_text: $main_menu-link_bg;
 $main_menu-active_link_bg: $body-bg;
 
 $footer-bg: $red;
-$footer-color: $white;
+$footer-color: transparentize($white, 0.25);
 $footer-link-color: #fff;
 
 $incoming-correspondence-color: #8c6673;
@@ -414,78 +414,88 @@ a.link_button_green_large {
 
 
 /* Footer */
-.footer-container {
-  max-width: 64em;
-  margin: 0 auto;
-  font-size: 16px;
-}
 
 #footer {
   @include clearfix;
   background-color: $footer-bg;
   color: $footer-color;
-  padding: 2em 4em;
-  font-family: $sans-serif-font-family;
+  font-size: 16px;
+  text-align: left;
+  padding: 2em 0;
   a {
-    text-decoration: none;
     color: $footer-link-color;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $footer-color
+    }
+  }
+  h2 {
+    font-size: 1em;
+    color: #fff;
   }
   ul {
     list-style: none outside none;
     padding-left: 0;
+    font-size: 0.823529412em;
+  }
+  p {
+    font-size: 0.823529412em;
+    line-height: 1.5em;
   }
 }
 
+.footer-container {
+
+  @include grid-row();
+}
+
+.footer__content {
+  margin-bottom: 2em;
+}
+
+
+.footer__about {
+  @include grid-column(12);
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    @include grid-column(4);
+  }
+}
+
+.footer__more-links {
+  margin-bottom: 2em;
+  @include grid-column(12);
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    @include grid-column(2);
+  }
+}
+
+.footer__logos {
+  @include clearfix;
+  @include grid-column(12);
+  margin-bottom: 2em;
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    @include grid-column(3, $push: 3);
+    margin-bottom: 0;
+  }
+}
+
+.iic-logo,
 .liberian-seal {
-  @include respond-min( 35em ){
-    width: 20%;
-    float: left;
-    text-align: left;
-  }
+  width: 50%;
+  float: left;
+  max-width: 118px;
   img {
-    max-height: 80px;
+    max-height: 77px;
   }
-}
-
-#footer-nav {
-  @include respond-min( 35em ){
-    width: 30%;
-    float: left;
-  }
-  li {
-    width: auto !important;
-    clear: none;
-    text-align: left;
-    padding: 0 !important;
-    float: none !important;
-  }
-
 }
 
 .footer__credits {
-  @include respond-min( 35em ){
-    width: 50%;
-    float: left;
-    text-align: right;
-  }
-  ul {
-    list-style: none outside none;
-    padding-left: 0;
-    margin: 0;
-  }
-  li {
-    display: inline-block;
-    text-align: center;
-    @include respond-min( 20em ){
-      width: 42%;
-      margin: 0 3%;
-      max-width: 150px
-    }
-  }
-  img {
-    max-width: 120px;
-    height: auto;
-  }
+  @include grid-column(12);
+  text-align: left;
+  border-top: 3px solid darken($red, 5%);
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 /* Request page */

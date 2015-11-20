@@ -411,6 +411,34 @@ a.link_button_green_large {
 
 }
 
+.social-links {
+  position: absolute;
+  top: 0.4em;
+  right: 64px;
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    top: 1em;
+    right: 0.9375em; //equal to the padding used by foundation for content areas
+  }
+}
+
+.social-link {
+  width: 32px;
+  height: 32px;
+  @extend .image-replacement;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 32px;
+  background-position: center;
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 0.8;
+  }
+}
+
+.social-link__facebook {
+  background-image: image-url('facebook-logo.png');
+}
 
 /* Footer */
 

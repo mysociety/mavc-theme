@@ -1,6 +1,6 @@
-$white: #fafafa;
-$red: #89302C;
-$blue: #152D5F;
+$white: #FFFFFF;
+$red: #D1423F;
+$blue: #2C7595;
 
 $locale-bg: #333;
 $locale-color: #999999;
@@ -16,13 +16,13 @@ $sans-serif-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $banner_bg: $blue;
 
-$main_menu-bg: $red;
+$main_menu-bg: darken($blue, 5%);
 $main_menu-search_text: #333;
 $main_menu-link_text: #fff;
-$main_menu-search_bg: #67848c;
+$main_menu-search_bg: darken($blue, 20%);
 $submenu-color: #9aa6ab;
 
-$main_menu-link_bg: $red;
+$main_menu-link_bg: darken($blue, 5%);
 $main_menu-active_link_text: $main_menu-link_bg;
 $main_menu-active_link_bg: $body-bg;
 
@@ -226,7 +226,6 @@ a.link_button_green_large {
 
 #topnav {
   background-color: $main_menu-bg;
-  border-top: 2px solid darken($main_menu-bg, 5%);
 }
 
 #navigation{

@@ -610,6 +610,22 @@ a.link_to_this {
   }
 }
 
+
+/* Soicial sharing on request page */
+.lib-social-share {
+
+}
+
+.share-col {
+  display: inline-block;
+  width: auto;
+  margin-right: 0.5em;
+  .fb-share-button {
+    position: relative;
+    top: -6px;
+  }
+}
+
 /* User page */
 #user_photo_on_profile {
   img, #set_photo {
@@ -647,3 +663,4 @@ dt {
   margin-top: 2em;
   text-align: center;
 }
+

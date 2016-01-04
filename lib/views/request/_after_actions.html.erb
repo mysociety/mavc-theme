@@ -1,0 +1,77 @@
+<div id="after_actions" class="after_actions">
+    <div class="lib-social-share">
+      <div class="share-col">
+        <a href="https://twitter.com/share" class="twitter-share-button"{count}>Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      </div>
+      <div class="share-col">
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        <div class="fb-share-button" data-href="<%= request.url %>" data-layout="button"></div>
+      </div>
+    </div>
+  <h2><%= _('Things to do with this request') %></h2>
+
+  <div id="anyone_actions" class="anyone_actions">
+    <strong><%= _('Anyone:') %></strong>
+    <ul>
+      <% if @info_request.comments_allowed? %>
+        <li>
+          <%= raw(_('<a href="{{url}}">Add an annotation</a> (to help the requester or others)', :url => new_comment_url(:url_title => @info_request.url_title).html_safe)) %>
+        </li>
+      <% end %>
+
+      <% if @old_unclassified %>
+        <li>
+          <%= link_to _('Update the status of this request'), '#describe_state_form_1' %>
+        </li>
+      <% end %>
+
+      <li>
+        <%= link_to _("Download a zip file of all correspondence"), download_entire_request_path(:url_title => @info_request.url_title) %>
+      </li>
+    </ul>
+  </div>
+
+  <% if ! @info_request.is_external? %>
+    <div id="owner_actions" class="owner_actions">
+      <strong><%= _('{{info_request_user_name}} only:',:info_request_user_name=>h(@info_request.user_name)) %></strong>
+
+      <ul>
+        <li>
+          <% if @last_response.nil? %>
+            <%= link_to _("Send a followup"), show_response_no_followup_path(:id => @info_request.id, :incoming_message_id => nil) + "#followup" %>
+          <% else %>
+            <%= link_to _("Write a reply"), show_response_path(:id => @info_request.id, :incoming_message_id => @last_response.id) + "#followup" %>
+          <% end %>
+        </li>
+
+        <% if !@old_unclassified %>
+          <li>
+            <%= link_to _("Update the status of this request"), request_path(@info_request, :update_status => 1) %>
+          </li>
+        <% end %>
+
+        <li>
+          <%= link_to _("Request an internal review"), show_response_no_followup_path(:id => @info_request.id, :incoming_message_id => nil) + "?internal_review=1#followup" %>
+        </li>
+      </ul>
+    </div>
+  <% end %>
+
+  <div id="public_body_actions" class="public_body_actions">
+    <strong><%= _('{{public_body_name}} only:',:public_body_name=>h(@info_request.public_body.name) ) %> </strong>
+
+    <ul>
+      <li>
+        <%= link_to _("Respond to request"), upload_response_path(:url_title => @info_request.url_title) %>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,103 @@
+<% @title = "Unhappy about a Freedom of Information request?" %>
+
+
+<% if !@info_request.nil? %>
+  <h1>Unhappy about the response you got
+    to your request '<%=request_link(@info_request) %>'?
+  </h1>
+<% else %>
+  <h1>Unhappy about the response you got?</h1>
+<% end %>
+
+<p>If ...</p>
+
+<ul>
+  <li>You didn't get a reply within 30 calendar days</li>
+  <li>You did not get all of the information that you requested <strong>or</strong></li>
+  <li>Your request was refused, but without a reason valid under the law</li>
+</ul>
+
+<p>... you can</p>
+
+<ol>
+  <li>Appeal the decision with the authority in question.</li>
+  <li>Ask for an <strong>internal review</strong> at the public authority.</li>
+  <li>If that doesn't help, complain to the <strong>Independent Information Commissioner</strong>.</li>
+  <li>Either way, also <strong>use other means</strong> to answer your question.</li>
+</ol>
+
+<h1 id="appeal_decision">1. Appeal the decision <a class="hover_a" href="#appeal_decision">#</a> </h1>
+
+<p>The law gives you the right to appeal a decision not to release information if you feel that the justification for not releasing that information does not comply with the law. This means you can appeal to the next level in the administrative decision-making process and essentially the authority is asked to reconsider its decision not to give you the information.</p>
+
+<p>It is worth trying the appeal process as it can result in the release of more information – sometimes even all of it.</p>
+
+<p>To submit an appeal, you need to contact the Independent Information Commissioner, stating clearly that you are submitting an appeal. The institution should do the rest.</p>
+
+<p>When you go to make the appeal, infoLib will give you more detailed guidance, and LFIC or iLab can help you formulate your appeal.</p>
+
+<h1 id="internal_review">2. Asking for an internal review <a class="hover_a" href="#internal_review">#</a> </h1>
+
+<p>
+  <% if !@info_request.nil? %>
+    <%= link_to "Request an internal review", show_response_no_followup_path(:id => @info_request.id, :incoming_message_id => nil) + "?internal_review=1#followup", :class => 'link_button_green request-internal-review-action' %> and then write a message asking the authority to review your request.
+  <% else %>
+    At the bottom of the relevant request page on <%= site_name %> choose
+    "request an internal review". Then write a message asking for an internal
+    review of your request. You may want to include a link to the
+    request page, to make it clear which request you are talking about.
+  <% end %>
+</p>
+
+<p>Internal reviews are conducted by a senior official or an internal information request review body which by law should be established by each authority or agency. An internal review shall be concluded within thirty (30) working days as of its filing by the applicant. The outcome of each internal review will be given in writing and copies shared with the applicant.
+</p>
+
+<h1 id="complaining">3. Complaining to the Information Commissioner <a class="hover_a" href="#complaining">#</a> </h1>
+
+<p>If you are still unhappy after the public authority has done their internal review,
+  then you can complain to the Information Commissioner. There is more information about how to do this on the Information Commissioner's website.
+</p>
+
+<p>To make it easier to send the relevant information to the
+  Information Commissioner, either
+  <% if !@info_request.nil? %>
+    include a link to your request
+    <strong><%=h request_url(@info_request) %></strong>
+  <% else %>
+    include a link to your request on <%= site_name %>
+<% end %>
+in your complaint or print out the whole page of your request and all attachments.
+</p>
+
+<p><%= site_name %> has no special facilities for handling a request at this stage - it
+  passes into the Information Commissioner's system. You can leave annotations on your
+  request keeping people informed of progress.</p>
+
+<p>A warning. There is a backlog of work at the Information Commissioner, and
+  it can take months to get resolution from them. If you reach this point,
+  you should accept that you won't get the information quickly by this means. Maybe
+  you want to help the fight to improve Freedom of Information, or maybe
+  getting the information slowly is still worthwhile. If in the end you are not happy with the outcome from the Information Commissioner they will advise you on how to pursue the request at the court level.</p>
+  
+  <p>You can also try and get the information by <strong>other means...</strong></p>
+
+<h1 id="other_means">4. Using other means to answer your question <a class="hover_a" href="#other_means">#</a> </h1>
+
+<p>You can try persuing your problem or your research in other ways.
+
+  <ul>
+    <li>Make a <strong>new FOI request</strong> for summary information, or for
+      documentation relating indirectly to matters in your refused request.
+      <a href="<%= help_contact_path %>">Ask us for ideas</a> if you're stuck.</li>
+    <li>If any <strong>other public authorities</strong> or publicly owned companies are involved,
+      then make FOI requests to them.</li>
+    <li>Write to <strong>your MP</strong> or other politician and ask for their help
+       finding the answer. </li>
+    <li>Ask <strong>other researchers</strong> who are interested in a similar
+      issue to yours for ideas. You can sometimes find them by browsing this site;
+      contact any registered user from their page. </li>
+    <li>NGO groups often request information, perhaps one group has requested something similar in the past and could support you in your request. It could be worth contacting NGO groups to ask for help.</li>
+    <li>The Liberia Freedom of Information Coalition is a partner organisation for this site and have processes for supporting people who are trying to access information.</li>
+    <li>You could form a small local campaign group and arrange a meeting
+      with staff from the authority.</li>
+  </ul>

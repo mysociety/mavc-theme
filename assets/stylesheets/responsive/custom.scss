@@ -650,6 +650,52 @@ dt {
   }
 }
 
+.steps__list li {
+  width: 33.3333%;
+  margin-left: 0 !important;
+}
+
+.steps__step-box {
+  background-color: lighten($color_mavc_lightorange, 10%);
+  padding: 2em;
+  box-shadow: 0 1px 2px transparentize($color_mavc_midgrey, 0.25);
+  min-height: 11em;
+}
+
+.steps__step-number {
+  left: 50%;
+  margin-left: -1.75em;
+  bottom: -1em;
+  top: auto;
+  height: 3.5em;
+  width: 3.5em;
+  background-color: darken($color_green, 5%);
+  box-shadow: 0 1px 2px transparentize($color_mavc_midgrey, 0.25);
+  padding: 1em;
+  border-radius: 100%;
+  color: $color_white;
+  text-align: center;
+  position: absolute;
+}
+
+.learn-more-foi {
+  margin-top: 3em;
+}
+
+.learn-more-foi a {
+  padding: 0.5em 1.25em;
+  border-radius: 3px;
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 0;
+  color: $color_black;
+  background-color: $color_mavc_lightgrey;
+
+  &:hover, &:focus {
+    background-color: darken($color_mavc_lightgrey, 15%);
+  }
+}
+
 /* Drop the extract indentation on small screens */
 #frontpage_examples .excerpt {
     padding: 0.2em 0 0 0;

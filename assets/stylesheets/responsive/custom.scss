@@ -214,6 +214,18 @@ a.link_button_green_large {
     &:focus{
         background-color: $main_menu-link_text;
     }
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $color_mavc_grey;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: $color_mavc_grey;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: $color_mavc_grey;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: $color_mavc_grey;
+    }
   }
 }
 
@@ -268,7 +280,7 @@ a.link_button_green_large {
     background-color: transparent;
   }
   #logged_in_links {
-    top: 4em;
+    top: 2.75em;
     .greeting, a {
       font-weight: normal;
     }
@@ -314,7 +326,11 @@ a.link_button_green_large {
     display: none;
   }
 
-  .rsp_menu_button{
+  .banner_site-title {
+    padding: 1.25em 1em 1.75em;
+  }
+
+  .rsp_menu_button {
     position: absolute;
     top: 0;
     /* 15px for margin minus 9 for background offset*/
@@ -333,27 +349,19 @@ a.link_button_green_large {
       height: 100%;
     }
   }
+}
 
-  /* Pad evenly top and bottom on smaller devices */
-  #logo_wrapper{
-    padding-top: 0.25em;
-    padding-bottom: 0.25em;
-    @include respond-min( $main_menu-mobile_menu_cutoff ){
-      @include lte-ie7 {
-        padding-bottom: 2em;
-      }
-    }
-    img {
-      padding: 1em 0 0.5em ;
-    }
-    @media(max-width: $main_menu-mobile_menu_cutoff ){
-      padding: 0.5em 0 0.5em 0.9375em;
-      img {
-        height: 30px;
-      }
-    }
+.site-title__logo {
+  // Smaller logo on mobiles
+  width: ($logo-width / 2);
+  height: ($logo-height / 2);
+  background-size: ($logo-width / 2) ($logo-height / 2);
+
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    width: $logo-width;
+    height: $logo-height;
+    background-size: $logo-width $logo-height;
   }
-
 }
 
 .social-links {
@@ -362,7 +370,7 @@ a.link_button_green_large {
   right: 64px;
   @include respond-min( $main_menu-mobile_menu_cutoff ){
     top: 1em;
-    right: 0.9375em; //equal to the padding used by foundation for content areas
+    right: 0.6em;
   }
 }
 

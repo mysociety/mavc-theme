@@ -1,0 +1,109 @@
+$main_menu-mobile_menu_cutoff: 58em;
+$row-width: 64em;
+$font-family: "Open sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+$sans-serif-font-family: $font-family;
+$base-font-size: 16px;
+
+// Specify the filename and dimensions of your logo file here
+$logo-filename: 'logo.png';
+$logo-highdpi-filename: 'logo@2.png'; //Should be at least 2x the size, in the same proportions
+$logo-width: 230px;
+$logo-height: 53px;
+
+$color_sand: #f3f1eb;
+$color_black: #333333;
+$color_orange: #f4a140;
+$color_blue: #2C7595;
+$color_green: #62b356;
+$color_yellow: #ffd836;
+$color_red: #D1423F;
+$color_violet: #a94ca6;
+$color_purple: #5c377f;
+$color_white: #ffffff;
+
+$color_mavc_darkgrey: #999999;
+$color_mavc_midgrey: #3d3b38;
+$color_mavc_grey: #a9a9a9;
+$color_mavc_lightgrey: #d3d3d3;
+$color_mavc_lightgreen: #aab26e;
+$color_mavc_purple: #8c6673;
+$color_mavc_teal: #6d918d;
+$color_mavc_orange: #ff7959;
+$color_mavc_mutedorange: #e69e5d;
+$color_mavc_mutedgreen: #D7DABD;
+$color_mavc_darkgreen: #839310;
+$color_mavc_darkred: #a1432c;
+$color_mavc_lightred: #ebc3a9;
+$color_mavc_lightorange: #edd3b8;
+$color_mavc_darkorange: #d69457;
+
+$color_neutral_light: $color_sand;
+$color_neutral_dark: $color_mavc_darkgrey;
+$color_primary: $color_violet;
+$color_secondary: $color_orange;
+
+$body-bg: $color_neutral_light;
+$form-label-font-color: $color_black;
+
+$body-font-color: $color_neutral_dark;
+$link-color: darken($color_blue, 20%);
+$action-color: $color_green;
+$form_input-bg: $color_white;
+
+$button-bg: darken($color_green, 10%);
+$button-color: $color_white;
+
+$status-success: darken($color_green, 18%);
+$status-failure: darken($color_red, 10%);
+$status-pending: darken($color_orange, 28%);
+
+$notice-color: $color_green;
+$error-color: $color_red;
+$action-color: $color_orange;
+
+$banner_inner_bg: $color_primary;
+$topnav_bg: darken($color_primary, 10%);
+
+$locale-bg: $color_black;
+$locale-color: $color_black;
+$locale-hover-color: $color_white;
+$link-color: $color_red;
+$body-font-color: $color_black;
+$body-bg: $color_white;
+$button-bg: $color_blue;
+$button-color: $color_white;
+$heading-color: $color_mavc_midgrey;
+
+$banner_bg: $color_blue;
+
+$main_menu-bg: darken($color_blue, 5%);
+$main_menu-search_text: $color_black;
+$main_menu-link_text: $color_white;
+$main_menu-search_bg: darken($color_blue, 20%);
+$submenu-color: #9aa6ab;
+
+$main_menu-link_bg: darken($color_blue, 5%);
+$main_menu-active_link_text: $main_menu-link_bg;
+$main_menu-active_link_bg: $body-bg;
+
+$footer-bg: $color_red;
+$footer-color: transparentize($color_white, 0.25);
+$footer-link-color: $color_white;
+
+$incoming-correspondence-color: $color_mavc_purple;
+$outgoing-correspondence-color: $color_mavc_teal;
+$correspondence-bg: $color_white;
+$correspondence-shadow: $color_mavc_lightgrey;
+
+$status-success: $color_mavc_lightgreen;
+$status-failure: $color_mavc_orange;
+$status-pending: $color_mavc_mutedorange;
+
+$notice-bg: $color_mavc_mutedgreen;
+$notice-border: $color_mavc_darkgreen;
+
+$error-bg: $color_mavc_lightred;
+$error-border: $color_mavc_darkred;
+
+$action-bg: $color_mavc_lightorange;
+$action-border: $color_mavc_darkorange;

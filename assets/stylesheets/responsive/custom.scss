@@ -656,6 +656,9 @@ div.correspondence {
 
 .incoming.correspondence {
   border-top: 8px solid $incoming-correspondence-color;
+  .correspondence_text a {
+    color: $incoming-correspondence-color;
+  }
   a.link_to_this {
     background-color: $incoming-correspondence-color;
   }

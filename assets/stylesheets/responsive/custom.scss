@@ -902,6 +902,29 @@ dt {
     padding: 5em 0 8em;
   }
 
+  .intro__title {
+    color: inherit;
+  }
+
+  .new-request__content {
+    background-color: $color_black;
+    background-color: rgba(#000, 0.7);
+    border-radius: 5px;
+    padding: 1.888888889em;
+  }
+
+  .new-request__title {
+    color: $color_white;
+    font-size: 1.4375em;
+    margin: 0 0 0.5em;
+  }
+
+  .new-request__description {
+    color: transparentize($color_white, 0.2);
+    @include ie8 {
+      color: $color_white;
+    }
+  }
   .new-request__make-new-requests {
     @include button-base;
     background-color: $color_mavc_red;
@@ -930,30 +953,6 @@ dt {
     &:focus {
       color: lighten($link-color, 40%);
     }
-  }
-}
-
-.intro__title {
-  color: inherit;
-}
-
-.new-request__content {
-  background-color: $color_black;
-  background-color: rgba(#000, 0.7);
-  border-radius: 5px;
-  padding: 1.888888889em;
-}
-
-.new-request__title {
-  color: $color_white;
-  font-size: 1.4375em;
-  margin: 0 0 0.5em;
-}
-
-.new-request__description {
-  color: transparentize($color_white, 0.2);
-  @include ie8 {
-    color: $color_white;
   }
 }
 

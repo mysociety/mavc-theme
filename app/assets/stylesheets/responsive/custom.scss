@@ -17,7 +17,9 @@
     color: $main_menu-link_text;
   }
   transition: background-color 0.5s ease-out;
-  &:hover{
+  &:hover,
+  &:active,
+  &:focus {
     background-color: darken($main_menu-bg, 5%);
     color: transparentize($main_menu-link_text, 0);
   }
@@ -29,8 +31,10 @@
   font-weight: bold;
   color: $main_menu-active_link_text;
   background-color: $main_menu-active_link_bg;
-  &:hover{
-      background-color: $main_menu-active_link_bg;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $main_menu-active_link_bg;
   }
 }
 

@@ -7,8 +7,8 @@ $base-font-size: 16px;
 // Specify the filename and dimensions of your logo file here
 $logo-filename: 'logo.png';
 $logo-highdpi-filename: 'logo@2.png'; //Should be at least 2x the size, in the same proportions
-$logo-width: 230px;
-$logo-height: 53px;
+$logo-width: 247px;
+$logo-height: 88px;
 
 $color_sand: #f3f1eb;
 $color_black: #333333;
@@ -37,20 +37,24 @@ $color_mavc_lightred: #ebc3a9;
 $color_mavc_lightorange: #edd3b8;
 $color_mavc_darkorange: #d69457;
 
+$color_mavc_blue: #002868;
+$color_mavc_red: #bf0a30;
+
 $color_neutral_light: $color_sand;
 $color_neutral_dark: $color_mavc_darkgrey;
-$color_primary: $color_violet;
-$color_secondary: $color_orange;
 
-$body-bg: $color_neutral_light;
+$color_primary: $color_mavc_blue;
+$color_secondary: $color_mavc_red;
+
+$body-bg: $color_white;
 $form-label-font-color: $color_black;
 
-$body-font-color: $color_neutral_dark;
-$link-color: darken($color_blue, 20%);
+$body-font-color: $color_black;
+$link-color: $color_mavc_blue;
 $action-color: $color_green;
 $form_input-bg: $color_white;
 
-$button-bg: darken($color_green, 10%);
+$button-bg: $color_blue;
 $button-color: $color_white;
 
 $status-success: darken($color_green, 18%);
@@ -61,30 +65,24 @@ $notice-color: $color_green;
 $error-color: $color_red;
 $action-color: $color_orange;
 
-$banner_inner_bg: $color_primary;
-$topnav_bg: darken($color_primary, 10%);
+$banner-bg: $color_sand;
+$banner_inner_bg: $banner-bg;
+$topnav_bg: $color_primary;
+
+$main_menu-bg: $topnav_bg;
+$main_menu-search_text: $color_black;
+$main_menu-link_text: $color_white;
+$main_menu-search_bg: $color_white;
+$submenu-color: #9aa6ab;
+
+$main_menu-link_bg: $topnav_bg;
+$main_menu-active_link_text: $main_menu-link_bg;
+$main_menu-active_link_bg: $body-bg;
 
 $locale-bg: $color_black;
 $locale-color: $color_black;
 $locale-hover-color: $color_white;
-$link-color: $color_red;
-$body-font-color: $color_black;
-$body-bg: $color_white;
-$button-bg: $color_blue;
-$button-color: $color_white;
 $heading-color: $color_mavc_midgrey;
-
-$banner_bg: $color_blue;
-
-$main_menu-bg: darken($color_blue, 5%);
-$main_menu-search_text: $color_black;
-$main_menu-link_text: $color_white;
-$main_menu-search_bg: darken($color_blue, 20%);
-$submenu-color: #9aa6ab;
-
-$main_menu-link_bg: darken($color_blue, 5%);
-$main_menu-active_link_text: $main_menu-link_bg;
-$main_menu-active_link_bg: $body-bg;
 
 $footer-bg: $color_red;
 $footer-color: transparentize($color_white, 0.25);

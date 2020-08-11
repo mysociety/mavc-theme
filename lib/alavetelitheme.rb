@@ -48,6 +48,24 @@ LOOSE_THEME_ASSETS = lambda do |logical_path, filename|
 end
 Rails.application.config.assets.precompile.unshift(LOOSE_THEME_ASSETS)
 
+Rails.application.config.assets.precompile << [
+  'roi-logo.png',
+  'IIC-logo.png',
+  'iicorgchart.png',
+  'ilab.png',
+  'alab.png',
+  'cartercenter.png',
+  'cemesp.png',
+  'cental.png',
+  'lficlogo.png',
+  'LIWOMAC.png',
+  'LMC-logo.png',
+  'lmi_logo.png',
+  'micat.png',
+  'pul_logo.png',
+  'Sfcg-logo.png'
+]
+
 def prepend_theme_assets
   # Prepend the asset directories in this theme to the asset path:
   ['stylesheets', 'images', 'javascripts', 'files'].each do |asset_type|

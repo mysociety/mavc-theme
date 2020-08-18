@@ -128,11 +128,6 @@ a {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: $heading-color;
-  font-family: $font-family;
-}
-
 /* Let h1s be a little smaller on small screens */
 @media( max-width: $main_menu-mobile_menu_cutoff ){
   h1 {
@@ -283,10 +278,6 @@ a.link_button_green_large {
 
 /* Header */
 
-#banner {
-  border-top: 0 !important;
-}
-
 .topnav {
   background-color: $topnav_bg;
   @media( min-width: $main_menu-mobile_menu_cutoff ) {
@@ -402,7 +393,7 @@ a.link_button_green_large {
   }
 }
 
-//* locale-list */ 
+//* locale-list */
 .locale-list {
   @include respond-min($main_menu-mobile_menu_cutoff) {
     position: relative;
@@ -499,7 +490,7 @@ p.locale-list-trigger {
 .locale-list .available-languages a:visited {
   text-decoration: none;
   transition: background-color 0.5s ease-out;
-  color: #fff; 
+  color: #fff;
   @include respond-min($main_menu-mobile_menu_cutoff) {
     background-color: darken($color_dark_grey, 10%);
     display: block;
@@ -549,7 +540,7 @@ p.locale-list-trigger {
       border: 0;
       padding: 0;
     }
-  } 
+  }
 
 
 #banner {
@@ -559,11 +550,7 @@ p.locale-list-trigger {
     display: none;
   }
 
-  .banner_site-title {
-    padding: 1.25em 1em 1.75em;
-  }
-
-  .rsp_menu_button {
+  .rsp_menu_button{
     position: absolute;
     top: 5px; // vertically centre the button in the header
     right: 4px; // 15px for margin minus 9 for background offset
@@ -590,39 +577,8 @@ p.locale-list-trigger {
   }
 }
 
-.social-links {
-  position: absolute;
-  top: 1em;
-  right: 64px;
-  z-index: 1; // stack above #logged_in_bar
-  @include respond-min( $main_menu-mobile_menu_cutoff ){
-    right: 0.6em;
-  }
-}
-
-.social-link {
-  padding: 0;
-  width: 32px;
-  height: 0;
-  padding-top: 32px;
-  @extend .image-replacement;
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-size: 32px;
-  background-position: center;
-  &:hover,
-  &:active,
-  &:focus {
-    opacity: 0.8;
-  }
-}
-
-.social-link__facebook {
-  background-image: image-url('facebook-logo.png');
-}
 
 /* Footer */
-
 #footer {
   @include clearfix;
   background-color: $footer-bg;
@@ -661,7 +617,6 @@ p.locale-list-trigger {
 .footer__content {
   margin-bottom: 2em;
 }
-
 
 .footer__about {
   @include grid-column(12);
@@ -867,19 +822,9 @@ a.link_to_this {
   }
 }
 
-
-/* Soicial sharing on request page */
-.lib-social-share {
-
-}
-
-.share-col {
-  display: inline-block;
-  width: auto;
-  margin-right: 0.5em;
-  .fb-share-button {
-    position: relative;
-    top: -6px;
+#header_right {
+  .link_button_green {
+    @include button-secondary;
   }
 }
 
@@ -999,6 +944,20 @@ dt {
     padding: 5em 0 8em;
   }
 
+  .hero__intro {
+    a {
+      &:link,
+      &:visited {
+        color: lighten($link-color, 60%);
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        color: lighten($link-color, 40%);
+      }
+    }
+  }
+
   .intro__title {
     color: inherit;
   }
@@ -1041,21 +1000,7 @@ dt {
 }
 
 .homepage-how-it-works {
-    border-top: none;
-}
-
-.hero__intro {
-  a {
-    &:link,
-    &:visited {
-      color: lighten($link-color, 60%);
-    }
-    &:hover,
-    &:active,
-    &:focus {
-      color: lighten($link-color, 40%);
-    }
-  }
+  border-top: none;
 }
 
 /* on the /help/partners page */
@@ -1065,5 +1010,5 @@ dt {
 }
 
 .show-with-keyboard-focus-only {
-    top: 0;
+  top: 0;
 }

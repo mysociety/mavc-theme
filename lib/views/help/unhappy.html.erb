@@ -40,7 +40,7 @@
 
 <p>
   <% if !@info_request.nil? %>
-    <%= link_to 'Request an internal review', new_request_followup_path(request_id: @info_request.id, internal_review: '1', anchor: 'followup'), class: 'link_button_green request-internal-review-action' %> and then write a message asking the authority to review your request.
+    <%= link_to 'Request an internal review', new_request_followup_path(@info_request.url_title, internal_review: 1, anchor: 'followup'), class: 'link_button_green request-internal-review-action' %> and then write a message asking the authority to review your request.
   <% else %>
     At the bottom of the relevant request page on <%= site_name %> choose
     "request an internal review". Then write a message asking for an internal
@@ -78,7 +78,7 @@ in your complaint or print out the whole page of your request and all attachment
   you should accept that you won't get the information quickly by this means. Maybe
   you want to help the fight to improve Freedom of Information, or maybe
   getting the information slowly is still worthwhile. If in the end you are not happy with the outcome from the Information Commissioner they will advise you on how to pursue the request at the court level.</p>
-  
+
   <p>You can also try and get the information by <strong>other means...</strong></p>
 
 <h1 id="other_means">4. Using other means to answer your question <a class="hover_a" href="#other_means">#</a> </h1>
